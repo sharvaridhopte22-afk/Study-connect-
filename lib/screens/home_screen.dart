@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'chat_screen.dart';
 import 'rooms_screen.dart';
 import 'profile_screen.dart';
+import 'joke_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const _HomeContent(),
     const ChatScreen(),
     const RoomsScreen(),
+    const JokeScreen(),
     const ProfileScreen(),
   ];
 
@@ -51,6 +53,10 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.meeting_room),
             label: 'Rooms',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.emoji_emotions),
+            label: 'Jokes',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
@@ -151,8 +157,8 @@ class _HomeContent extends StatelessWidget {
                   color: Colors.orange,
                 ),
                 _FeatureCard(
-                  icon: Icons.language,
-                  title: 'Translate',
+                  icon: Icons.emoji_emotions,
+                  title: 'Jokes',
                   color: Colors.purple,
                 ),
               ],
